@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:More_čávo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FF1E1E1E" Foreground="White">
+        Title="MainWindow" Height="450" Width="913" Background="#FF1E1E1E" Foreground="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="187*"/>
@@ -15,9 +15,9 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="t1" HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Margin="0,10,0,0" FontSize="24" FontWeight="Bold" FontFamily="Consolas" BorderThickness="5,5,5,5"/>
-        <TextBox x:Name="t2" HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Grid.Column="1" Margin="0,10,0,0" FontFamily="Consolas" FontSize="24" FontWeight="Bold" BorderThickness="5,5,5,5"/>
-        <Button x:Name="sw" Content="Switch" Grid.ColumnSpan="2" HorizontalAlignment="Right" Height="40" Margin="0,0,349,0" Grid.Row="1" VerticalAlignment="Center" Width="102" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="sw_Click"/>
+        <TextBox x:Name="t1" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Margin="10,0,0,0" FontSize="24" FontWeight="Bold" FontFamily="Consolas" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="t2" HorizontalAlignment="Right" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Grid.Column="1" Margin="0,0,10,0" FontFamily="Consolas" FontSize="24" FontWeight="Bold" BorderThickness="5,5,5,5"/>
+        <Button x:Name="sw" Content="Switch" Grid.ColumnSpan="2" Height="40" Margin="406,0,405,10" Grid.Row="1" VerticalAlignment="Bottom" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="sw_Click"/>
 
     </Grid>
 </Window>
