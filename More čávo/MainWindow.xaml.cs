@@ -20,8 +20,8 @@ namespace More_čávo
     /// </summary>
     public partial class MainWindow : Window
     {
-        Čavo Tomsn1 = new Čavo("Tomsn", "Blaohulič", new DateTime(2006, 3, 21), 100, 100, 0);
-        Čavo Marian1 = new Čavo("Marian", "Čavočum", new DateTime(2006, 5, 12), 100, 100, 0);
+        Čavo Tomsn1 = new Čavo("Tomsn", "Blaohulič", new DateTime(2006, 3, 21), 100, 100, 0, 27);
+        Čavo Marian1 = new Čavo("Marian", "Čavočum", new DateTime(2006, 5, 12), 100, 100, 0, 25);
         int who = 0;
 
 
@@ -51,6 +51,38 @@ namespace More_čávo
                 who--;
                 t2.BorderBrush = new SolidColorBrush(Color.FromArgb(128, 0, 0, 0));
                 t1.BorderBrush = new SolidColorBrush(Color.FromArgb(128, 128, 0, 0));
+            }
+        }
+
+        private void atack_click(object sender, RoutedEventArgs e)
+        {
+            switch(who)
+            {
+                case 0:
+                    Tomsn1.Čavoatack(Marian1);
+                    write();
+                    break;
+
+                case 1:
+                    Marian1.Čavoatack(Tomsn1);
+                    write();
+                    break;
+                    
+            }
+        }
+
+        private void glob_click(object sender, RoutedEventArgs e)
+        {
+            switch (who)
+            {
+                case 0:
+                   
+                    break;
+
+                case 1:
+                  
+                    break;
+
             }
         }
     }

@@ -18,6 +18,8 @@
         <TextBox x:Name="t1" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Margin="10,0,0,0" FontSize="24" FontWeight="Bold" FontFamily="Consolas" BorderThickness="5,5,5,5"/>
         <TextBox x:Name="t2" HorizontalAlignment="Right" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Grid.Column="1" Margin="0,0,10,0" FontFamily="Consolas" FontSize="24" FontWeight="Bold" BorderThickness="5,5,5,5"/>
         <Button x:Name="sw" Content="Switch" Grid.ColumnSpan="2" Height="40" Margin="406,0,405,10" Grid.Row="1" VerticalAlignment="Bottom" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="sw_Click"/>
+        <Button x:Name="sw_Copy" Content="Atack" Grid.ColumnSpan="2" Height="40" Margin="406,10,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="atack_click"/>
+        <Button x:Name="sw_Copy1" Content="Monster" Grid.ColumnSpan="2" Height="40" Margin="406,55,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="glob_click" RenderTransformOrigin="0.536,0.618"/>
 
     </Grid>
 </Window>

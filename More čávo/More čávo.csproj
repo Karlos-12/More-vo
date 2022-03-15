@@ -7,4 +7,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="6IbCBqa.png" />
+    <None Remove="9acf4bf6-9b8f-4dbc-97fe-034459d5ee3cpng-cb276149877-1531900725-1531900727.png" />
+    <None Remove="monster energy ultra.png" />
+    <None Remove="monster-energy-ultra-500-ml-paradise-original.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="6IbCBqa.png" />
+    <Resource Include="9acf4bf6-9b8f-4dbc-97fe-034459d5ee3cpng-cb276149877-1531900725-1531900727.png" />
+    <Resource Include="monster energy ultra.png" />
+    <Resource Include="monster-energy-ultra-500-ml-paradise-original.png" />
+  </ItemGroup>
+
 </Project>
