@@ -20,9 +20,9 @@ namespace More_čávo
     /// </summary>
     public partial class MainWindow : Window
     {
-        Čavo Tomsn1 = new Čavo("Tomsn", "Blaohulič", new DateTime(2006, 3, 21), 100, 100, 0, 27);
-        Čavo Marian1 = new Čavo("Marian", "Čavočum", new DateTime(2006, 5, 12), 100, 100, 0, 25);
-        int who = 0;
+        public Čavo Tomsn1 = new Čavo("Tomsn", "Blaohulič", new DateTime(2006, 3, 21), 100, 100, 0, 27);
+        public Čavo Marian1 = new Čavo("Marian", "Čavočum", new DateTime(2006, 5, 12), 100, 100, 0, 25);
+        public int who = 0;
 
 
         public MainWindow()
@@ -76,11 +76,13 @@ namespace More_čávo
             switch (who)
             {
                 case 0:
-                   
+                    Tomsn1.Monster_more();
+                    write();
                     break;
 
                 case 1:
-                  
+                    Marian1.Monster_more();
+                    write();
                     break;
 
             }

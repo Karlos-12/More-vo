@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace More_čávo
 {
-    class Čavo
+    public class Čavo
     {
         public string name { get; }
         public string surname { get; }
@@ -41,15 +41,32 @@ namespace More_čávo
             }   
         }
 
+       // Window1 selec = new Window1();
+
         public void Monster_more()
         {
             if(life > 0)
             {
-               mon
+                enerdzi += 25;
+               // selec.Show(window);
             }
             else
             { MessageBox.Show("Čavo si dead"); }
         }
+
+       // public void vybrano()
+      //  {
+       //     switch (selec.choise)
+        //    {
+         //       case 0:
+         //           MessageBox.Show("Vyber něco hochu!");
+         //           break;
+         //       default:
+          //          enerdzi += selec.hodnota;
+         //           break;
+//
+          //  }
+      //  }
 
 
     }
