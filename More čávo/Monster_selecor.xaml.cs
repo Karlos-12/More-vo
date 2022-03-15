@@ -20,16 +20,20 @@ namespace More_čávo
         public int choise = 0;
         public int hodnota = 0;
         public int who = 0;
-        Window win = null;
+        
+        Čavo _1 = null;
+        Čavo _2 = null;
 
         public Window1()
         {
             InitializeComponent();
         }
 
-        public void Show(Window window)
+        public void Show(Čavo __1, Čavo __2, int wh)
         {
-            win = window;
+           who = wh;
+            _1 = __1;
+            _2 = __2;
             Show();
         }
 
@@ -39,22 +43,44 @@ namespace More_čávo
             hodnota = 20;
             if (who == 0)
             {
-              // win.
+                _1.vybrano(hodnota);
+            }
+            else if(who == 1)
+            {
+                _2.vybrano(hodnota);
             }
             Hide();
+
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             choise = 2;
             hodnota = 25;
+            if (who == 0)
+            {
+                _1.vybrano(hodnota);
+            }
+            else if (who == 1)
+            {
+                _2.vybrano(hodnota);
+            }
             Hide();
+
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             choise = 3;
             hodnota = 25;
+            if (who == 0)
+            {
+                _1.vybrano(hodnota);
+            }
+            else if (who == 1)
+            {
+                _2.vybrano(hodnota);
+            }
             Hide();
         }
 
@@ -62,6 +88,14 @@ namespace More_čávo
         {
             choise = 4;
             hodnota = 35;
+            if (who == 0)
+            {
+                _1.vybrano(hodnota);
+            }
+            else if (who == 1)
+            {
+                _2.vybrano(hodnota);
+            }
             Hide();
         }
     }

@@ -14,6 +14,7 @@ namespace More_čávo
         public int life { get; set; }
         public int Xpcka { get; set; }
         public int atack { get; set; }
+        public MainWindow w { get; set; }
         
 
         public Čavo(string n, string srn, DateTime b, int eng, int lif, int xp, int at)
@@ -25,6 +26,11 @@ namespace More_čávo
             life = lif;
             Xpcka = xp;
             atack = at;
+            
+        }
+        public void Winset(MainWindow win)
+        {
+            w = win;
         }
 
         public void Čavoatack(Čavo _2)
@@ -41,32 +47,34 @@ namespace More_čávo
             }   
         }
 
-       // Window1 selec = new Window1();
+       Window1 selec = new Window1();
 
         public void Monster_more()
         {
             if(life > 0)
             {
-                enerdzi += 25;
-               // selec.Show(window);
+                
+                
+                selec.Show(w.Tomsn1, w.Marian1, w.who);
             }
             else
             { MessageBox.Show("Čavo si dead"); }
         }
 
-       // public void vybrano()
-      //  {
-       //     switch (selec.choise)
-        //    {
-         //       case 0:
-         //           MessageBox.Show("Vyber něco hochu!");
-         //           break;
-         //       default:
-          //          enerdzi += selec.hodnota;
-         //           break;
-//
-          //  }
-      //  }
+        public void vybrano(int send)
+        {
+            switch (selec.choise)
+            {
+                case 0:
+                    MessageBox.Show("Vyber něco hochu!");
+                    break;
+                default:
+                    enerdzi += send;
+                    break;
+
+            }
+            w.write();
+        }
 
 
     }

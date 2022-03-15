@@ -29,12 +29,51 @@ namespace More_čávo
         {
             InitializeComponent();
             write();
+            Tomsn1.Winset(this);
+            Marian1.Winset(this);
         }
 
         public void write()
         {
             t1.Text = ("Name: " + Tomsn1.name + " " + Tomsn1.surname  + "\nBirth: " + Tomsn1.birth + "\nEnergdzi: " + Tomsn1.enerdzi + "\nLife: " + Tomsn1.life + "\nXP: " + Tomsn1.Xpcka);
             t2.Text = ("Name: " + Marian1.name + " " + Marian1.surname + "\nBirth: " + Marian1.birth + "\nEnergdzi: " + Marian1.enerdzi + "\nLife: " + Marian1.life + "\nXP: " + Marian1.Xpcka);
+
+            h1.Children.Clear();
+            h2.Children.Clear();
+
+            for (int i = 0; i < Tomsn1.life / 10; i++)
+            {
+                
+                Rectangle rec = new Rectangle
+                {
+                    Fill = new SolidColorBrush(Color.FromRgb(0, 128, 0)),
+                    Stroke = new SolidColorBrush(Color.FromRgb(90, 90, 90)),
+                    StrokeThickness = 2,
+                    Width = 37,
+                    Height = 60
+                };
+
+                h1.Children.Add(rec);
+                Canvas.SetTop(rec, 0);
+                Canvas.SetLeft(rec, i*37);
+            }
+
+            for (int i = 0; i < Marian1.life / 10; i++)
+            {
+                
+                Rectangle rec = new Rectangle
+                {
+                    Fill = new SolidColorBrush(Color.FromRgb(0, 128, 0)),
+                    Stroke = new SolidColorBrush(Color.FromRgb(90, 90, 90)),
+                    StrokeThickness = 2,
+                    Width = 37,
+                    Height = 60
+                };
+
+                h2.Children.Add(rec);
+                Canvas.SetTop(rec, 0);
+                Canvas.SetLeft(rec, i * 37);
+            }
 
         }
 
@@ -59,13 +98,27 @@ namespace More_čávo
             switch(who)
             {
                 case 0:
-                    Tomsn1.Čavoatack(Marian1);
-                    write();
+                    if (Marian1.life <= 0)
+                    {
+                        MessageBox.Show("Však už se nehýbe...");
+                    }
+                    else
+                    {
+                        Tomsn1.Čavoatack(Marian1);
+                        write();
+                    }
                     break;
 
                 case 1:
-                    Marian1.Čavoatack(Tomsn1);
-                    write();
+                    if (Tomsn1.life <= 0)
+                    {
+                        MessageBox.Show("Však už se nehýbe...");
+                    }
+                    else
+                    {
+                        Marian1.Čavoatack(Tomsn1);
+                        write();
+                    }
                     break;
                     
             }
