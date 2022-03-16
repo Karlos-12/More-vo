@@ -76,6 +76,29 @@ namespace More_čávo
             w.write();
         }
 
+        public void jabkomore()
+        {
+            int r = 0;
+            Random random = new Random();
+            random.Next(0, 3);
+            switch (r)
+                {
+                case 0:
+                    life += 5;
+                    break;
+                case 1:
+                    life += 10;
+                    break;
+                case 2:
+                    life += 15;
+                    break;
+                case 3:
+                    life += 20;
+                    break;
+            }
+           
+        }
+
 
     }
 }

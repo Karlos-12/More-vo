@@ -140,5 +140,19 @@ namespace More_čávo
 
             }
         }
+
+        private void jabko_click(object sender, RoutedEventArgs e)
+        {
+            switch(who)
+            {
+                case 0:
+                    Tomsn1.jabkomore();
+                    break;
+                case 1:
+                    Marian1.jabkomore();
+                    break;
+            }
+            write();
+        }
     }
 }
