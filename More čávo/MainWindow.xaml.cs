@@ -182,5 +182,7 @@ namespace More_čávo
             }
             write();
         }
+
+        //more život jde dopředu
     }
 }
