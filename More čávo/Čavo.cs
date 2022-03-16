@@ -95,8 +95,33 @@ namespace More_čávo
                 case 3:
                     life += 20;
                     break;
+            }          
+        }
+
+        public void tekutinka()
+        {
+            int hp = life;
+            int ep = enerdzi;
+
+            life = ep;
+            enerdzi = hp;
+        }
+
+        public void morekralik()
+        {
+            Random random = new Random();
+            int ch = random.Next(0, 1);
+            switch (ch)
+            {
+                case 0:
+                    life = 0;
+                    MessageBox.Show("měl vzteklinu čavo");
+                    break;
+                case 1:
+                    Xpcka += 25;
+                    MessageBox.Show("hedvábně hebký");
+                    break;
             }
-           
         }
 
 

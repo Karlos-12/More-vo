@@ -85,7 +85,7 @@ namespace More_čávo
                 t1.BorderBrush = new SolidColorBrush(Color.FromArgb(128, 0, 0, 0));
                 t2.BorderBrush = new SolidColorBrush(Color.FromArgb(128, 128, 0, 0));
             }
-            else 
+            else if(who == 1)
             {
                 who--;
                 t2.BorderBrush = new SolidColorBrush(Color.FromArgb(128, 0, 0, 0));
@@ -150,6 +150,34 @@ namespace More_čávo
                     break;
                 case 1:
                     Marian1.jabkomore();
+                    break;
+            }
+            write();
+        }
+
+        private void voa_click(object sender, RoutedEventArgs e)
+        {
+            switch (who)
+            {
+                case 0:
+                    Tomsn1.tekutinka();
+                    break;
+                case 1:
+                    Marian1.tekutinka();
+                    break;
+            }
+            write();
+        }
+
+        private void zajda_click(object sender, RoutedEventArgs e)
+        {
+            switch (who)
+            {
+                case 0:
+                    Tomsn1.morekralik();
+                    break;
+                case 1:
+                    Marian1.morekralik();
                     break;
             }
             write();
