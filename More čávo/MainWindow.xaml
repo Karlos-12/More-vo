@@ -5,25 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:More_čávo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="913" Background="#FF1E1E1E" Foreground="White">
+        Title="MainWindow" Height="450" Width="913" Background="#FF1E1E1E" Foreground="White" KeyDown="Window_KeyDown">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="187*"/>
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="394*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="t1" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Margin="10,0,0,0" FontSize="24" FontWeight="Bold" FontFamily="Consolas" BorderThickness="5,5,5,5" BorderBrush="Maroon"/>
-        <TextBox x:Name="t2" HorizontalAlignment="Right" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="354" Background="#FF2D2D30" Foreground="White" Grid.Column="1" Margin="0,0,10,0" FontFamily="Consolas" FontSize="24" FontWeight="Bold" BorderThickness="5,5,5,5"/>
-        <Button x:Name="sw" Content="Switch" Grid.ColumnSpan="2" Height="40" Margin="406,0,405,10" Grid.Row="1" VerticalAlignment="Bottom" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="sw_Click"/>
-        <Button x:Name="sw_Copy" Content="Atack" Grid.ColumnSpan="2" Height="40" Margin="406,10,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="atack_click"/>
-        <Button x:Name="sw_Copy1" Content="Monster" Grid.ColumnSpan="2" Height="40" Margin="406,55,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="glob_click" RenderTransformOrigin="0.536,0.618"/>
-        <Canvas x:Name="h1" Grid.Column="0" Margin="0,0,90,0" Grid.Row="1"/>
-        <Canvas x:Name="h2" Grid.Column="1" Margin="90,0,0,0" Grid.Row="1"/>
-        <Button x:Name="sw_Copy2" Content="Aple" Grid.ColumnSpan="2" Height="40" Margin="406,100,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="jabko_click" RenderTransformOrigin="0.516,1.699"/>
-        <Button x:Name="sw_Copy3" Content="Strange liquid" Grid.ColumnSpan="2" Height="40" Margin="406,145,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" Click="voa_click" RenderTransformOrigin="0.516,1.699" FontSize="14"/>
-        <Button x:Name="sw_Copy4" Content="Rabit" Grid.ColumnSpan="2" Height="40" Margin="406,190,405,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="zajda_click" RenderTransformOrigin="0.516,1.699"/>
+        <TextBox x:Name="t1" Text="TextBox" TextWrapping="Wrap" Background="#FF2D2D30" Foreground="White" Margin="10,10,9,10" FontSize="24" FontWeight="Bold" FontFamily="Consolas" BorderThickness="5,5,5,5" BorderBrush="Maroon"/>
+        <TextBox x:Name="t2" Text="TextBox" TextWrapping="Wrap" Background="#FF2D2D30" Foreground="White" Grid.Column="3" Margin="3,10,11,10" FontFamily="Consolas" FontSize="24" FontWeight="Bold" BorderThickness="5,5,5,5"/>
+        <Button x:Name="sw" Content="Switch" Grid.ColumnSpan="2" Margin="7,10,11,10" Grid.Row="1" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="sw_Click" Grid.Column="1"/>
+        <Button x:Name="sw_Copy" Content="Atack" Grid.ColumnSpan="2" Height="40" Margin="7,10,11,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="atack_click" Grid.Column="1"/>
+        <Button x:Name="sw_Copy1" Content="Monster" Grid.ColumnSpan="2" Height="40" Margin="7,55,11,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="glob_click" RenderTransformOrigin="0.536,0.618" Grid.Column="1"/>
+        <Canvas x:Name="h1" Grid.Column="0" Margin="0,0,33,0" Grid.Row="1"/>
+        <Canvas x:Name="h2" Grid.Column="3" Margin="27,0,0,0" Grid.Row="1"/>
+        <Button x:Name="sw_Copy2" Content="Aple" Grid.ColumnSpan="2" Height="40" Margin="7,100,11,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="jabko_click" RenderTransformOrigin="0.516,1.699" Grid.Column="1"/>
+        <Button x:Name="sw_Copy3" Content="Strange liquid" Grid.ColumnSpan="2" Height="40" Margin="7,145,11,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" Click="voa_click" RenderTransformOrigin="0.516,1.699" FontSize="14" Grid.Column="1"/>
+        <Button x:Name="sw_Copy4" Content="Rabit" Grid.ColumnSpan="2" Height="40" Margin="7,190,11,0" VerticalAlignment="Top" Background="#FF3E3E42" Foreground="White" FontWeight="Bold" FontSize="24" Click="zajda_click" RenderTransformOrigin="0.516,1.699" Grid.Column="1"/>
+        <Expander x:Name="exhelp" HorizontalAlignment="Left" Header="Clue" Margin="0,0,0,5" Width="349" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Grid.ColumnSpan="3" ExpandDirection="Up" VerticalAlignment="Bottom" Height="254" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontWeight="Bold" Grid.Column="1">
+            <Grid Background="#E53D3D3D" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="98*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="help" Grid.ColumnSpan="2" Margin="0,0,0,0" TextWrapping="Wrap" Text="..." FontFamily="Consolas" FontSize="16"/>
+            </Grid>
+        </Expander>
     </Grid>
 </Window>

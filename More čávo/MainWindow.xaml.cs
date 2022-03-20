@@ -20,8 +20,8 @@ namespace More_čávo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Čavo Tomsn1 = new Čavo("Tomsn", "Blaohulič", new DateTime(2006, 3, 21), 100, 100, 0, 27);
-        public Čavo Marian1 = new Čavo("Marian", "Čavočum", new DateTime(2006, 5, 12), 100, 100, 0, 25);
+        public Čavo Tomsn1 = new Čavo("Tomsn", "Blaohulič", new DateTime(2006, 3, 21), 100, 100, 0, 20);
+        public Čavo Marian1 = new Čavo("Marian", "Čavočum", new DateTime(2006, 5, 12), 100, 100, 0, 20);
         public int who = 0;
 
 
@@ -31,6 +31,7 @@ namespace More_čávo
             write();
             Tomsn1.Winset(this);
             Marian1.Winset(this);
+            help.Text = " atack = atack\n monster = energy refill\n appel = heal\n luquid = energy/health switch\n rabit = xp or damage";
         }
 
         public void write()
@@ -183,6 +184,13 @@ namespace More_čávo
             write();
         }
 
-        //more život jde dopředu
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if((Key)sender == Key.F11)
+            {
+                exhelp.IsExpanded = true;
+            }
+        }
+
     }
 }

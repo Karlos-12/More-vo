@@ -114,7 +114,7 @@ namespace More_čávo
             switch (ch)
             {
                 case 0:
-                    life = 0;
+                    life -= 20;
                     MessageBox.Show("měl vzteklinu čavo");
                     break;
                 case 1:
